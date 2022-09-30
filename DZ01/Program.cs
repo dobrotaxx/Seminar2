@@ -9,11 +9,11 @@
 Console.WriteLine("Введите трехзначное число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 
-int TwoDigit(int number)
+int SecondDigit(int number)
 {
     int TwoDigits = number % 100;
     int OneDigit = TwoDigits / 10;
     return (OneDigit);
 }
-int result = TwoDigit(number);
+int result = SecondDigit(number);
 Console.WriteLine(result);
