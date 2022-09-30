@@ -11,13 +11,17 @@ int firstNumber = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите два числа B: ");
 int secondNumber = Convert.ToInt32(Console.ReadLine());
 
+ int chekingForMultiplicity(int firstNumber, int secondNumber)
+ {
+    if (firstNumber % secondNumber == 0)
+    {
+        Console.WriteLine("Кратно");
+    }
+    else
+    {
+        Console.WriteLine($"Не кратно, остаток {firstNumber % secondNumber}");
+    }
+    return(firstNumber % secondNumber);
+ }
 
- int result = firstNumber % secondNumber;
-if(result > 0)
-{
-    Console.WriteLine($"Не кратно, остаток {result}");
-}
-else
-{
-    Console.WriteLine("Кратно");
-}
+chekingForMultiplicity(firstNumber, secondNumber);
