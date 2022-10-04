@@ -11,22 +11,15 @@ int number = Convert.ToInt32(Console.ReadLine());
 
 void ThirdDigit(int arg1)
 {
-    if (arg1 < 99) Console.WriteLine("Третьей цифры нет");
-
+    if (arg1 < 99)
+    {
+        Console.WriteLine("Третьей цифры нет");
+    }
     else
     {
-        if (arg1 <= 999)
+        while (arg1 >= 999)// Делим число на 10 пока оно не станет трехзначным
         {
-            int temp = arg1 % 100;
-            int result = temp % 10;
-            Console.WriteLine($"{arg1} -> {result}");
-        }
-        else
-        {
-            while (arg1 >= 999)// Делим число на 10 пока оно не станет трехзначным
-            {
-                arg1 = arg1 / 10;
-            }
+            arg1 = arg1 / 10;
         }
         int temp3 = arg1 % 100;
         temp3 = temp3 % 10;
